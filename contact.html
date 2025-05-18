@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+Okay, I've modified the code to make the logo more mobile-friendly. Here's the updated code:<!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8" />
@@ -55,7 +55,6 @@
             margin-bottom: 10px;
             display: inline-block;
             vertical-align: middle;
-            margin-left: 120px;
         }
 
         header p {
@@ -71,8 +70,8 @@
             border-radius: 8px;
             box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
             display: flex;
-            align-items: center; /* Vertically align items */
-            gap: 50px; /* Space between image and text */
+            align-items: center;
+            gap: 50px;
         }
 
         .contact h2 {
@@ -83,7 +82,7 @@
         }
 
         .contact-info {
-           flex: 1; /* Allow text to take up available space */
+            flex: 1;
             margin-left: 0;
         }
 
@@ -93,11 +92,12 @@
         }
 
         .contact img {
-            width: 400px; /* Adjust as needed */
+            width: 400px;
             height: auto;
             border-radius: 10px;
             order: 2;
         }
+
         .logo-header {
             position: absolute;
             left: 50px;
@@ -116,15 +116,16 @@
             font-size: 0.9em;
             margin-top: 40px;
         }
+
         #backToTopBtn {
-            display: none; /* Hidden by default */
-            position: fixed; /* Fixed positioning relative to the viewport */
+            display: none;
+            position: fixed;
             bottom: 20px;
             right: 20px;
-            z-index: 99; /* Ensure it's on top of other elements */
+            z-index: 99;
             border: none;
             outline: none;
-            background-color: #388e3c; /* Theme color (like your nav background) */
+            background-color: #388e3c;
             color: white;
             cursor: pointer;
             padding: 10px 15px;
@@ -134,37 +135,40 @@
         }
 
         #backToTopBtn:hover {
-            background-color: #2e7d32; /* Darker shade on hover */
+            background-color: #2e7d32;
         }
 
         @media (max-width: 768px) {
-        .contact {
-            flex-direction: column;
-            text-align: center;
+            .contact {
+                flex-direction: column;
+                text-align: center;
+            }
+            .contact img{
+                order: 0;
+                width: 90%;
+                max-width: 400px;
+            }
+            .logo-header {
+                height: 120px;
+                left: 10px;
+            }
+            header h1 {
+                margin-left: 0; /* Remove left margin on small screens */
+                font-size: 2.5em;
+            }
+            header p{
+                font-size: 1em;
+            }
         }
-        .contact img{
-            order: 0;
-            width: 90%;
-            max-width: 400px;
+
+        @media (max-width: 480px) {
+            header h1 {
+                font-size: 2em;
+            }
+            .contact{
+                padding: 20px;
+            }
         }
-        .logo-header{
-            height: 120px;
-            left: 10px;
-        }
-        header h1{
-            margin-left: 130px;
-            font-size: 2.5em;
-        }
-    }
-    @media (max-width: 480px){
-        header h1{
-            margin-left: 110px;
-            font-size: 2em;
-        }
-        .contact{
-            padding: 20px;
-        }
-    }
     </style>
 </head>
 <body>
@@ -204,7 +208,7 @@
         function scrollToTop() {
             window.scrollTo({
                 top: 0,
-                behavior: 'smooth' // Optional: adds smooth scrolling animation
+                behavior: 'smooth'
             });
         }
 
