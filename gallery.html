@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Our Services - Case Landscaping & Handyman</title>
+    <title>Showcase - Case Landscaping & Handyman</title>
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap" rel="stylesheet">
     <style>
         body {
@@ -38,7 +38,6 @@
             color: #fff;
             padding: 100px 20px;
             text-align: center;
-            border-bottom: 2px solid #81c784;
             position: relative;
         }
 
@@ -61,11 +60,11 @@
             filter: drop-shadow(0 0 8px rgba(255, 255, 255, 0.8));
         }
 
-
         section {
             padding: 40px 20px;
-            max-width: 1000px;
+            max-width: 1100px;
             margin: auto;
+            text-align: center;
         }
 
         section h2 {
@@ -75,84 +74,39 @@
             font-size: 2.2em;
         }
 
-        ul {
-            list-style: none;
-            padding: 0;
+        .gallery-grid {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-            gap: 30px;
-        }
-
-        li {
-            background: #fff;
-            padding: 30px;
-            border-radius: 12px;
-            box-shadow: 0 4px 12px rgba(0,0,0,0.1);
-            transition: transform 0.2s ease-in-out, box-shadow 0.2s ease-in-out;
-            border: 1px solid #e0f2e0;
-            position: relative;
-        }
-
-        li:hover {
-            transform: translateY(-5px);
-            box-shadow: 0 6px 18px rgba(0,0,0,0.15);
-        }
-
-        li strong {
-            color: #2e7d32;
-            font-size: 1.3em;
-            margin-bottom: 10px;
-            display: block;
-        }
-
-        li img {
-            max-width: 100%;
-            border-radius: 8px;
-            margin-top: 15px;
-        }
-
-        .service-image {
-            width: 100%;
-            height: auto;
-            border-radius: 8px;
-            object-fit: cover;
-        }
-
-        .handyman-repairs {
-            display: flex;
-            overflow-x: auto;
+            grid-template-columns: repeat(2, 1fr);
             gap: 20px;
-            padding-top: 20px;
-            margin-top: 20px;
-            overflow: hidden;
-            scroll-snap-type: x mandatory;
-            -webkit-overflow-scrolling: touch;
-            scroll-behavior: smooth;
-            position: relative;
+            margin-bottom: 20px;
         }
 
-        .handyman-repairs img {
-            width: 300px;
+        .gallery-grid img {
+            width: 100%;
             height: 300px;
             object-fit: cover;
-            border-radius: 12px;
-            flex-shrink: 0;
-            scroll-snap-align: start;
-            margin-right: 0;
+            border-radius: 10px;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.1);
         }
 
-
-        .junk-brush-images {
-            display: flex;
-            flex-direction: column;
-            gap: 15px;
-            margin-top: 15px;
-        }
-        .junk-brush-images img{
-            width: 100%;
-            height: auto;
+        .review-box {
+            background-color: #fff;
+            padding: 20px;
+            margin-bottom: 20px;
             border-radius: 8px;
-            object-fit: cover;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+            animation: float 5s infinite;
+            margin: 20px;
+        }
+
+        .review-box h3 {
+            color: #1b5e20;
+            margin-bottom: 10px;
+        }
+
+        .review-box p {
+            color: #333;
+            line-height: 1.6;
         }
 
         footer {
@@ -163,16 +117,62 @@
             font-size: 0.9em;
             margin-top: 40px;
         }
-        /* Back to Top Button CSS */
+
+        .gallery-section-title {
+            text-align: center;
+            font-size: 1.5em;
+            color: #1e3a8a;
+            margin-bottom: 10px;
+            font-weight: bold;
+        }
+
+        .section-divider {
+            border-top: 1px solid #81c784;
+            margin-top: 40px;
+            padding-top: 40px;
+            width: 100%;
+        }
+
+        .image-section {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            width: 100%;
+        }
+
+        .junk-removal-image {
+            width: 100%;
+            height: auto;
+            max-height: 300px;
+            object-fit: cover;
+            border-radius: 10px;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+        }
+
+        @keyframes float {
+            0% { transform: translateY(0); }
+            50% { transform: translateY(-10px); }
+            100% { transform: translateY(0); }
+        }
+
+        .star-rating {
+            display: inline-block;
+        }
+
+        .star-rating span {
+            color: #ffc107;
+            font-size: 1.2em;
+        }
+
         #backToTopBtn {
-            display: none; /* Hidden by default */
-            position: fixed; /* Fixed positioning relative to the viewport */
+            display: none;
+            position: fixed;
             bottom: 20px;
             right: 20px;
-            z-index: 99; /* Ensure it's on top of other elements */
+            z-index: 99;
             border: none;
             outline: none;
-            background-color: #388e3c; /* Theme color (like your nav background) */
+            background-color: #388e3c;
             color: white;
             cursor: pointer;
             padding: 10px 15px;
@@ -182,136 +182,147 @@
         }
 
         #backToTopBtn:hover {
-            background-color: #2e7d32; /* Darker shade on hover */
+            background-color: #2e7d32;
         }
-         @media (max-width: 768px) {
-            .logo-header{
+
+        @media (max-width: 768px) {
+            .logo-header {
                 height: 120px;
                 left: 10px;
             }
-            header h1{
+
+            header h1 {
                 margin-left: 130px;
                 font-size: 2.5em;
             }
+
+            .gallery-grid {
+                grid-template-columns: 1fr;
+            }
         }
-        @media (max-width: 480px){
-            header h1{
-                margin-left: 110px; /* Adjust to ensure it does not overlap logo */
+
+        @media (max-width: 480px) {
+            header h1 {
+                margin-left: 110px;
                 font-size: 2em;
             }
-             section {
-                padding: 20px 10px; /* Reduce padding on very small screens */
+
+            section {
+                padding: 20px 10px;
             }
+
             form {
-                padding: 15px; /* Reduce form padding */
+                padding: 15px;
             }
         }
+
+        /* New styles for remodeling sections */
+        .remodel-section {
+            background: #fff;
+            padding: 20px;
+            border-radius: 12px;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+            margin-bottom: 30px;
+            border: 1px solid #e0f2e0;
+        }
+
+        .remodel-section h3 {
+            color: #1e3a8a;
+            text-align: center;
+            margin-bottom: 20px;
+            font-size: 1.5em;
+        }
+
+        .remodel-images {
+            display: flex;
+            gap: 15px;
+            justify-content: center;
+            flex-wrap: wrap;
+        }
+
+       .remodel-images img {
+            width: 100%;  /* Make images take up full width of their container */
+            height: 300px; /* Fixed height for consistency */
+            object-fit: cover;  /* Maintain aspect ratio; cover the container */
+            border-radius: 8px;
+        }
+
+        .remodel-images .caption {
+            text-align: center;
+            font-size: 0.9em;
+            color: #555;
+            margin-top: 5px;
+        }
+        .deck-before-container {
+            display: flex;
+            justify-content: center;
+            gap: 15px;
+            width: 100%;
+        }
+        .deck-after-container{
+            display: flex;
+            justify-content: center;
+            gap: 15px;
+            width: 100%;
+            flex-wrap: wrap;
+        }
+        .deck-after-container img{
+           width: 100%;  /* Make images take up full width of their container */
+            height: 300px; /* Fixed height for consistency */
+            object-fit: cover;  /* Maintain aspect ratio; cover the container */
+            border-radius: 8px;
+        }
+        /* general image container */
+        .image-container {
+            background: #fff;
+            padding: 20px;
+            border-radius: 12px;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+            margin-bottom: 30px;
+            border: 1px solid #e0f2e0;
+        }
+       .remodel-images-labeled {
+            display: flex;
+            gap: 15px;
+            justify-content: center;
+            flex-wrap: wrap;
+        }
+
+        .remodel-images-labeled div {
+            width: 32%;
+            height: 300px;
+            overflow: hidden;
+            border-radius: 8px;
+            display: flex; /* Enable flexbox for vertical alignment */
+            flex-direction: column;
+            align-items: center; /* Center items horizontally */
+            position: relative;
+        }
+
+        .remodel-images-labeled img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        .remodel-images-labeled .caption {
+            text-align: center;
+            font-size: 0.9em;
+            color: #555;
+            margin-top: 5px;
+        }
+        .remodel-images-labeled .label{
+            position: absolute;
+            top: 0;
+            left: 0;
+            background-color: rgba(0, 0, 0, 0.6);
+            color: white;
+            padding: 5px 10px;
+            border-radius: 8px 0 8px 0;
+            font-size: 0.8em;
+        }
+
     </style>
-    <script>
-        document.addEventListener('DOMContentLoaded', function() {
-            const handymanScroll = document.querySelector('.handyman-repairs');
-            let scrollIntervalId;
-            let isDragging = false;
-            let startX;
-            let imageCount = handymanScroll.querySelectorAll('img').length;
-            let currentImageIndex = 0;
-            let scrollTimer;
-            let isScrolling = false;
-            const scrollSpeed = 4000; // set static scroll speed
-
-            function autoScroll() {
-                if (!isDragging) {
-                    const firstImage = handymanScroll.querySelector('img:nth-child(' + (currentImageIndex + 1) + ')');
-                    // Check if firstImage is null
-                    if (firstImage) {
-                        const scrollAmount = firstImage.offsetWidth + 20;
-                        handymanScroll.scrollLeft += scrollAmount;
-                        currentImageIndex++;
-
-                        if (currentImageIndex >= imageCount) {
-                            currentImageIndex = 0;
-                            handymanScroll.scrollLeft = 0;
-                        }
-                    }
-                }
-            }
-
-            function startAutoScroll() {
-                // Check if scrollIntervalId is already set to prevent multiple intervals
-                if (!scrollIntervalId) {
-                    scrollIntervalId = setInterval(autoScroll, scrollSpeed);
-                }
-            }
-
-            function stopAutoScroll() {
-                clearInterval(scrollIntervalId);
-                scrollIntervalId = null; // Clear the interval ID
-            }
-
-            handymanScroll.addEventListener('mousedown', (e) => {
-                isDragging = true;
-                startX = e.pageX;
-                stopAutoScroll();
-                clearTimeout(scrollTimer);
-                isScrolling = true;
-            });
-
-            handymanScroll.addEventListener('mousemove', (e) => {
-                if (isDragging) {
-                    const deltaX = e.pageX - startX;
-                    handymanScroll.scrollLeft -= deltaX;
-                    startX = e.pageX;
-                }
-            });
-
-            handymanScroll.addEventListener('mouseup', () => {
-                isDragging = false;
-                startAutoScroll();
-                isScrolling = false;
-                scrollTimer = setTimeout(() => {
-                    if (!isScrolling) {
-                        startAutoScroll();
-                    }
-                }, 200);
-            });
-
-            handymanScroll.addEventListener('mouseleave', () => {
-                isDragging = false;
-                startAutoScroll();
-                clearTimeout(scrollTimer);
-                isScrolling = false;
-            });
-
-            handymanScroll.addEventListener('scroll', () => {
-                clearTimeout(scrollTimer);
-                isScrolling = true;
-                scrollTimer = setTimeout(() => {
-                    isScrolling = false;
-                }, 500);
-            });
-
-            startAutoScroll();
-        });
-
-        //scroll to top
-         function scrollToTop() {
-            window.scrollTo({
-                top: 0,
-                behavior: 'smooth'
-            });
-        }
-
-        window.onscroll = function() {scrollFunction()};
-
-        function scrollFunction() {
-            if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
-                document.getElementById("backToTopBtn").style.display = "block";
-            } else {
-                document.getElementById("backToTopBtn").style.display = "none";
-            }
-        }
-
-    </script>
 </head>
 <body>
     <nav>
@@ -324,61 +335,274 @@
 
     <header>
         <img src="logo.png" alt="Company Logo" class="logo-header">
-        <h1>Our Services</h1>
+        <h1>Our Work Showcase</h1>
     </header>
 
     <section>
-        <h2>What We Offer</h2>
-        <ul>
-            <li>
-                <strong>Lawn Mowing</strong>
-                <p>Reliable weekly or bi-weekly service to keep your lawn neat and sharp.</p>
-                <img src="services_mowing.jpg" alt="Lawn Mowing" class="service-image">
-            </li>
-            <li>
-                <strong>Edging & Trimming</strong>
-                <p>Crisp edges and clean borders around sidewalks, patios, and driveways.</p>
-                <img src="services_edging.jpg" alt="Edging & Trimming" class="service-image">
-            </li>
-            <li>
-                <strong>Mulch & Rock Installation</strong>
-                <p>Boost curb appeal with fresh mulch, rock beds, or flower installations.</p>
-                <img src="services_mulch.jpg" alt="Mulch & Rock Installation" class="service-image">
-            </li>
-            <li>
-                <strong>Seasonal Cleanup</strong>
-                <p>Spring and fall leaf removal, debris haul away, and full yard refresh.</p>
-                <img src="services_seasonal.jpg" alt="Seasonal Cleanup" class="service-image">
-                <img src="services_seasonal2.jpg" alt="Seasonal Cleanup 2" class="service-image">
-            </li>
-            <li>
-                <strong>Junk & Brush Removal</strong>
-                <p>Clear your yard or home exterior of overgrowth, branches, and clutter.</p>
-                <div class="junk-brush-images">
-                    <img src="services_junk.jpg" alt="Junk Removal" >
-                    <img src="services_brush.jpg" alt="Brush Removal" >
+        <h2>See the Difference</h2>
+        <div class="image-container">
+            <div class="gallery-section-title">Lawn Renovation</div>
+            <div class="gallery-grid">
+                <img src="showcase_before.jpg" alt="Before Lawn Work">
+                <img src="showcase_after.jpg" alt="After Lawn Work">
+            </div>
+        </div>
+        <div class="section-divider"></div>
+        <div class="image-container">
+            <div class="gallery-section-title">Mulching Projects</div>
+            <div class="gallery-grid">
+                <img src="showcase_mulch1.jpg" alt="Mulch Project">
+                <img src="showcase_mulch2.jpg" alt="Mulch Project">
+                <img src="showcase_mulch3.jpg" alt="Mulch Project">
+                <img src="showcase_mulch4.jpg" alt="Mulch Project">
+            </div>
+        </div>
+        <div class="section-divider"></div>
+        <div class="image-container">
+            <div class="gallery-section-title">Junk Removal</div>
+            <div class="gallery-grid" style="grid-template-columns: 1fr;">
+                <img src="showcase_junk.jpg" alt="Junk Removal" class="junk-removal-image">
+            </div>
+        </div>
+        <div class="section-divider"></div>
+        <div class="image-container">
+            <div class="gallery-section-title">Fence Projects</div>
+            <div class="gallery-grid">
+                <img src="showcase_fence1.jpg" alt="Fences">
+                <img src="showcase_fence2.jpg" alt="Fences">
+            </div>
+        </div>
+        <div class="section-divider"></div>
+        <div class="image-container">
+            <div class="gallery-section-title">Power Washing Projects</div>
+            <div class="gallery-grid">
+                <img src="showcase_powerwash1.jpg" alt="Power Washing" style="width: 100%; height: 300px; object-fit: cover;">
+                <img src="showcase_powerwash2.jpg" alt="Power Washing" style="width: 100%; height: 300px; object-fit: cover;">
+            </div>
+        </div>
+        <div class="section-divider"></div>
+        <div class="image-container">
+            <div class="gallery-section-title">Remodeling Projects</div>
+            <section class="remodel-section">
+                <h3>Shower Remodel</h3>
+                <div class="remodel-images-labeled">
+                    <div >
+                        <img src="showcase_remodel1.jpg" alt="Shower Before" >
+                        <span class = "label">Before</span>
+                    </div>
+                    <div >
+                        <img src="showcase_remodel2.jpg" alt="Shower During" >
+                         <span class = "label">During</span>
+                    </div>
+                    <div >
+                        <img src="showcase_remodel3.jpg" alt="Shower After" >
+                         <span class = "label">After</span>
+                    </div>
                 </div>
-            </li>
-             <li>
-                <strong>Handyman Repairs</strong>
-                <p>Small repairs, fence work, painting, hanging, power washing & more.</p>
-                <div class="handyman-repairs">
-                    <img src="services_handyman1.jpg" alt="Handyman Repair 1">
-                    <img src="services_handyman2.jpg" alt="Handyman Repair 2">
-                    <img src="services_handyman3.jpg" alt="Handyman Repair 3">
-                    <img src="services_handyman4.jpg" alt="Handyman Repair 4">
-                    <img src="services_handyman5.jpg" alt="Handyman Repair 5">
-                    <img src="services_handyman6.jpg" alt="Handyman Repair 6">
-                    <img src="services_handyman7.jpg" alt="Handyman Repair 7">
-                    <img src="services_handyman8.jpg" alt="Handyman Repair 8">
+            </section>
+
+            <section class="remodel-section">
+                <h3>Vanity Remodel</h3>
+                <div class="remodel-images-labeled">
+                    <div>
+                        <img src="showcase_remodel4.jpg" alt="Vanity Before">
+                         <span class = "label">Before</span>
+                    </div>
+                    <div>
+                        <img src="showcase_remodel5.jpg" alt="Vanity After">
+                        <span class = "label">After</span>
+                    </div>
                 </div>
-            </li>
-        </ul>
-        <button onclick="scrollToTop()" id="backToTopBtn" title="Go to top">^</button>
+            </section>
+
+            <section class="remodel-section">
+                <h3>Deck Remodel</h3>
+                <div class="remodel-images-labeled">
+                    <div >
+                        <img src="showcase_remodel6.jpg" alt="Deck Before 1">
+                        <span class = "label">Before</span>
+                    </div>
+                    <div>
+                        <img src="showcase_remodel7.jpg" alt="Deck Before 2">
+                        <span class = "label">Before</span>
+                    </div>
+                    <div >
+                        <img src="showcase_remodel8.jpg" alt="Deck After 1">
+                        <span class = "label">After</span>
+                    </div>
+                     <div>
+                        <img src="showcase_remodel9.jpg" alt="Deck After 2">
+                        <span class = "label">After</span>
+                    </div>
+                     <div>
+                        <img src="showcase_remodel10.jpg" alt="Deck After 3">
+                        <span class = "label">After</span>
+                    </div>
+                </div>
+            </section>
+        </div>
+        <div class="section-divider"></div>
+        <div class="image-container">
+            <div class="gallery-section-title">Flooring Projects</div>
+            <div class="gallery-grid">
+                <img src="showcase_flooring1.jpg" alt="Flooring">
+                <img src="showcase_flooring2.jpg" alt="Flooring">
+                <img src="showcase_flooring3.jpg" alt="Flooring">
+                <img src="showcase_flooring4.jpg" alt="Flooring">
+            </div>
+        </div>
+    </section>
+    <section class="section-divider">
+        <h2>Customer Reviews</h2>
+        <div id="reviewContainer">
+            <div class="review-box">
+                <h3>Elizabeth Bronaugh</h3>
+                <div class="star-rating">
+                    <span>★</span>
+                    <span>★</span>
+                    <span>★</span>
+                    <span>★</span>
+                    <span>★</span>
+                </div>
+                <p>March 3rd</p>
+                <p>"Gavin saw a post where I had been searching for help with junk removal. Since my husband recently passed away, I am handling everything now on my own and was feeling very stressed at how much was piling up. He took all my worry about these items away when he came quickly to our home, worked with me on pricing and then hauled it all away for me, and completely on his own! I appreciated his timeliness and thorough job! Will use again in the future and suggest anyone else do the same!"</p>
+            </div>
+            <div class="review-box">
+                <h3>Justin Hirsh</h3>
+                <div class="star-rating">
+                    <span>★</span>
+                    <span>★</span>
+                    <span>★</span>
+                    <span>★</span>
+                    <span>★</span>
+                </div>
+                <p>April 13, 2024</p>
+                <p>"I needed my lawn cut very last second and the fine owner of this company was quick to do the job! Extremely affordable too. Will definitely be recommending your services to my family and friends."</p>
+            </div>
+            <div class="review-box">
+                <h3>Ricky Heer</h3>
+                <div class="star-rating">
+                    <span>★</span>
+                    <span>★</span>
+                    <span>★</span>
+                    <span>★</span>
+                    <span>★</span>
+                </div>
+                <p>April 3, 2024</p>
+                <p>"Gavin with Case Landscaping & Handyman Service does it all ! Very impressed what needs done he will get done!! Highly recommend 10/10 !"</p>
+            </div>
+            <div class="review-box">
+                <h3>Zack Workman</h3>
+                <div class="star-rating">
+                    <span>★</span>
+                    <span>★</span>
+                    <span>★</span>
+                    <span>★</span>
+                    <span>★</span>
+                </div>
+                <p>April 2, 2024</p>
+                <p>"Does good work, highly recommend"</p>
+            </div>
+            <div class="review-box">
+                <h3>Jeremy Broerman</h3>
+                <div class="star-rating">
+                    <span>★</span>
+                    <span>★</span>
+                    <span>★</span>
+                    <span>★</span>
+                </div>
+                <p>April 1, 2024</p>
+                <p>"Great company, great work, very personable, always showed up on time or early. I highly recommend and will continue to do business in the future !"</p>
+            </div>
+            <div class="review-box">
+                <h3>Alycia Abrams</h3>
+                <div class="star-rating">
+                    <span>★</span>
+                    <span>★</span>
+                    <span>★</span>
+                    <span>★</span>
+                    <span>★</span>
+                </div>
+                <p>April 1, 2024</p>
+                <p>"Case Landscaping & Handyman service helped me out big time!! He is very professional, on time, helped me understand the problem and fixed it fast and cheaper than any other quotes I received! I appreciate all the great work done by Gavin and his team! highly recommend, and I will always call if I need handyman services! Thank you ! !"</p>
+            </div>
+            <div class="review-box">
+                <h3>Leila Fox</h3>
+                <div class="star-rating">
+                    <span>★</span>
+                    <span>★</span>
+                    <span>★</span>
+                    <span>★</span>
+                    <span>★</span>
+                </div>
+                <p>April 1, 2024</p>
+                <p>"Absolutely love this company! they have been cutting my grass for at least the last 3 to 4 years. great competitive pricing! they have traveled to multiple houses I have lived in, I've had them take out giant bushes and fallen trees. always professional, respectful, and on time"</p>
+            </div>
+            <div class="review-box">
+                <h3>Sam Lemaster</h3>
+                <div class="star-rating">
+                    <span>★</span>
+                    <span>★</span>
+                    <span>★</span>
+                    <span>★</span>
+                    <span>★</span>
+                </div>
+                <p>March 29, 2024</p>
+                <p>"Gavin with Case Landscaping has been great. Very professional and makes my lawn and garden look great every year! Highly recommend"</p>
+            </div>
+            <div class="review-box">
+                <h3>Amy Powell Hahn</h3>
+                <div class="star-rating">
+                    <span>★</span>
+                    <span>★</span>
+                    <span>★</span>
+                    <span>★</span>
+
+                </div>
+                <p>August 28, 2022</p>
+                <p>"He is a hard worker and went above and beyond to make my yard look beautiful. He checked with me every step of the way and gave opinions and suggestions when I needed them."</p>
+            </div>
+            <div class="review-box">
+                <h3>Alec Parker</h3>
+                <div class="star-rating">
+                    <span>★</span>
+                    <span>★</span>
+                    <span>★</span>
+                    <span>★</span>
+                    <span>★</span>
+                </div>
+                <p>August 27, 2022</p>
+                <p>"Case Landscaping and handyman services did an amazing job on my garden! They completely transformed the look of my home! My curb appeal now looks amazing!! They showed up early! Were very professional, and very communicative! 10/10 would reccomend! Thanks!!!"</p>
+            </div>
+        </div>
     </section>
 
     <footer>
         &copy; 2025 Case Landscaping & Handyman. All rights reserved.
     </footer>
+    <button onclick="scrollToTop()" id="backToTopBtn" title="Go to top">^</button>
+
+    <script>
+        // JavaScript function to scroll to the top of the page
+        function scrollToTop() {
+            window.scrollTo({
+                top: 0,
+                behavior: 'smooth'
+            });
+        }
+
+        // Show/hide the button based on scroll position
+        window.onscroll = function () {
+            scrollFunction()
+        };
+
+        function scrollFunction() {
+            if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+                document.getElementById("backToTopBtn").style.display = "block";
+            } else {
+                document.getElementById("backToTopBtn").style.display = "none";
+            }
+        }
+    </script>
 </body>
 </html>
