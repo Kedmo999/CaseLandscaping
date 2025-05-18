@@ -4,26 +4,25 @@
     <meta charset="UTF-8">
     <title>Case Landscaping & Handyman</title>
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="style.css"> </head>
+    <link rel="stylesheet" href="style.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"> </head>
 <body>
+    <nav>
+        <a href="index.html">Home</a>
+        <a href="services.html">Services</a>
+        <a href="gallery.html">Showcase</a>
+        <a href="quote.html">Quote</a>
+        <a href="contact.html">Contact</a>
+    </nav>
 
     <header>
         <a href="index.html">
-            <img src="logo.png" alt="Company Logo" class="logo-top">
-        </a>
+            <img src="logo.png" alt="Company Logo" class="logo-header">  </a>
         <h1>Case Landscaping & Handyman</h1>
         <p>"What needs done, gets done!"</p>
         <a href="quote.html" class="cta-button">Get a Free Quote</a>
         <div class="referral">Refer a friend and get 1 FREE lawn mowing!</div>
     </header>
-
-    <nav>
-        <a href="index.html">Home</a>
-        <a href="services.html">Services</a>
-        <a href="gallery.html">Showcase</a>
-        <a href="quote.html">Get a Quote</a>
-        <a href="contact.html">Contact</a>
-    </nav>
 
     <section>
         <h2>Welcome</h2>
@@ -36,7 +35,6 @@
     <footer>
         &copy; 2025 Case Landscaping & Handyman. All rights reserved.
     </footer>
-
 
     <button onclick="scrollToTop()" id="backToTopBtn" title="Go to top">^</button>
 
@@ -60,28 +58,5 @@
             }
         }
     </script>
-    <style>
-        #backToTopBtn {
-            display: none; /* Hidden by default */
-            position: fixed; /* Fixed positioning relative to the viewport */
-            bottom: 20px;
-            right: 30px;
-            z-index: 99; /* Ensure it's on top of other elements */
-            border: none;
-            outline: none;
-            background-color: #388e3c; /* Theme color (like your nav background) */
-            color: white;
-            cursor: pointer;
-            padding: 10px 15px;
-            border-radius: 5px;
-            font-size: 1.2em;
-            transition: background-color 0.3s ease; /* Smooth transition on hover */
-        }
-
-        #backToTopBtn:hover {
-            background-color: #2e7d32; /* Darker shade on hover */
-        }
-
-    </style>
 </body>
 </html>
